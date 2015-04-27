@@ -1,0 +1,127 @@
+2015-04-25 22:51:30 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-04-25 22:51:30 INFO  deprecation:1049 - session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-04-25 22:51:30 INFO  JvmMetrics:76 - Initializing JVM Metrics with processName=JobTracker, sessionId=
+2015-04-25 22:51:30 WARN  JobSubmitter:153 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2015-04-25 22:51:30 WARN  JobSubmitter:261 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2015-04-25 22:51:30 INFO  FileInputFormat:281 - Total input paths to process : 2
+2015-04-25 22:51:31 INFO  JobSubmitter:494 - number of splits:2
+2015-04-25 22:51:31 INFO  JobSubmitter:583 - Submitting tokens for job: job_local109141792_0001
+2015-04-25 22:51:31 INFO  Job:1300 - The url to track the job: http://localhost:8080/
+2015-04-25 22:51:31 INFO  Job:1345 - Running job: job_local109141792_0001
+2015-04-25 22:51:31 INFO  LocalJobRunner:471 - OutputCommitter set in config null
+2015-04-25 22:51:31 INFO  LocalJobRunner:489 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2015-04-25 22:51:31 INFO  LocalJobRunner:448 - Waiting for map tasks
+2015-04-25 22:51:31 INFO  LocalJobRunner:224 - Starting task: attempt_local109141792_0001_m_000000_0
+2015-04-25 22:51:31 INFO  ProcfsBasedProcessTree:181 - ProcfsBasedProcessTree currently is supported only on Linux.
+2015-04-25 22:51:31 INFO  Task:587 -  Using ResourceCalculatorProcessTree : null
+2015-04-25 22:51:31 INFO  MapTask:753 - Processing split: file:/Users/mohangoyal/Projects/big-data/mr/example2/data/tmp/run1/pass1_records/records00001:0+2134016
+2015-04-25 22:51:31 INFO  MapTask:1202 - (EQUATOR) 0 kvi 26214396(104857584)
+2015-04-25 22:51:31 INFO  MapTask:995 - mapreduce.task.io.sort.mb: 100
+2015-04-25 22:51:31 INFO  MapTask:996 - soft limit at 83886080
+2015-04-25 22:51:31 INFO  MapTask:997 - bufstart = 0; bufvoid = 104857600
+2015-04-25 22:51:31 INFO  MapTask:998 - kvstart = 26214396; length = 6553600
+2015-04-25 22:51:31 INFO  MapTask:402 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-04-25 22:51:31 INFO  CodecPool:179 - Got brand-new decompressor [.deflate]
+2015-04-25 22:51:31 INFO  FSInputChecker:285 - Found checksum error: b[0, 0]=
+org.apache.hadoop.fs.ChecksumException: Checksum error: file:/Users/mohangoyal/Projects/big-data/mr/example2/data/tmp/run1/pass1_records/records00001 at 2096128
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.readChunk(ChecksumFileSystem.java:254)
+	at org.apache.hadoop.fs.FSInputChecker.readChecksumChunk(FSInputChecker.java:276)
+	at org.apache.hadoop.fs.FSInputChecker.fill(FSInputChecker.java:214)
+	at org.apache.hadoop.fs.FSInputChecker.read1(FSInputChecker.java:232)
+	at org.apache.hadoop.fs.FSInputChecker.read(FSInputChecker.java:196)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at org.apache.hadoop.io.DataOutputBuffer$Buffer.write(DataOutputBuffer.java:70)
+	at org.apache.hadoop.io.DataOutputBuffer.write(DataOutputBuffer.java:120)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2359)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2491)
+	at org.apache.hadoop.mapreduce.lib.input.SequenceFileRecordReader.nextKeyValue(SequenceFileRecordReader.java:72)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.nextKeyValue(MapTask.java:553)
+	at org.apache.hadoop.mapreduce.task.MapContextImpl.nextKeyValue(MapContextImpl.java:80)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.nextKeyValue(WrappedMapper.java:91)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:144)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:784)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2015-04-25 22:51:31 INFO  MapTask:1457 - Starting flush of map output
+2015-04-25 22:51:31 INFO  MapTask:1475 - Spilling map output
+2015-04-25 22:51:31 INFO  MapTask:1476 - bufstart = 0; bufend = 2432496; bufvoid = 104857600
+2015-04-25 22:51:31 INFO  MapTask:1478 - kvstart = 26214396(104857584); kvend = 26103832(104415328); length = 110565/6553600
+2015-04-25 22:51:31 INFO  MapTask:1660 - Finished spill 0
+2015-04-25 22:51:31 INFO  LocalJobRunner:224 - Starting task: attempt_local109141792_0001_m_000001_0
+2015-04-25 22:51:31 INFO  ProcfsBasedProcessTree:181 - ProcfsBasedProcessTree currently is supported only on Linux.
+2015-04-25 22:51:31 INFO  Task:587 -  Using ResourceCalculatorProcessTree : null
+2015-04-25 22:51:32 INFO  MapTask:753 - Processing split: file:/Users/mohangoyal/Projects/big-data/mr/example2/data/tmp/run1/pass1_records/records00000:0+2125824
+2015-04-25 22:51:32 INFO  MapTask:1202 - (EQUATOR) 0 kvi 26214396(104857584)
+2015-04-25 22:51:32 INFO  MapTask:995 - mapreduce.task.io.sort.mb: 100
+2015-04-25 22:51:32 INFO  MapTask:996 - soft limit at 83886080
+2015-04-25 22:51:32 INFO  MapTask:997 - bufstart = 0; bufvoid = 104857600
+2015-04-25 22:51:32 INFO  MapTask:998 - kvstart = 26214396; length = 6553600
+2015-04-25 22:51:32 INFO  MapTask:402 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-04-25 22:51:32 INFO  FSInputChecker:285 - Found checksum error: b[0, 0]=
+org.apache.hadoop.fs.ChecksumException: Checksum error: file:/Users/mohangoyal/Projects/big-data/mr/example2/data/tmp/run1/pass1_records/records00000 at 2096128
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.readChunk(ChecksumFileSystem.java:254)
+	at org.apache.hadoop.fs.FSInputChecker.readChecksumChunk(FSInputChecker.java:276)
+	at org.apache.hadoop.fs.FSInputChecker.fill(FSInputChecker.java:214)
+	at org.apache.hadoop.fs.FSInputChecker.read1(FSInputChecker.java:232)
+	at org.apache.hadoop.fs.FSInputChecker.read(FSInputChecker.java:196)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at org.apache.hadoop.io.DataOutputBuffer$Buffer.write(DataOutputBuffer.java:70)
+	at org.apache.hadoop.io.DataOutputBuffer.write(DataOutputBuffer.java:120)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2359)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2491)
+	at org.apache.hadoop.mapreduce.lib.input.SequenceFileRecordReader.nextKeyValue(SequenceFileRecordReader.java:72)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.nextKeyValue(MapTask.java:553)
+	at org.apache.hadoop.mapreduce.task.MapContextImpl.nextKeyValue(MapContextImpl.java:80)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.nextKeyValue(WrappedMapper.java:91)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:144)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:784)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2015-04-25 22:51:32 INFO  MapTask:1457 - Starting flush of map output
+2015-04-25 22:51:32 INFO  MapTask:1475 - Spilling map output
+2015-04-25 22:51:32 INFO  MapTask:1476 - bufstart = 0; bufend = 2443898; bufvoid = 104857600
+2015-04-25 22:51:32 INFO  MapTask:1478 - kvstart = 26214396(104857584); kvend = 26103280(104413120); length = 111117/6553600
+2015-04-25 22:51:32 INFO  MapTask:1660 - Finished spill 0
+2015-04-25 22:51:32 INFO  LocalJobRunner:456 - map task executor complete.
+2015-04-25 22:51:32 WARN  LocalJobRunner:560 - job_local109141792_0001
+java.lang.Exception: org.apache.hadoop.fs.ChecksumException: Checksum error: file:/Users/mohangoyal/Projects/big-data/mr/example2/data/tmp/run1/pass1_records/records00001 at 2096128
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: org.apache.hadoop.fs.ChecksumException: Checksum error: file:/Users/mohangoyal/Projects/big-data/mr/example2/data/tmp/run1/pass1_records/records00001 at 2096128
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.readChunk(ChecksumFileSystem.java:254)
+	at org.apache.hadoop.fs.FSInputChecker.readChecksumChunk(FSInputChecker.java:276)
+	at org.apache.hadoop.fs.FSInputChecker.fill(FSInputChecker.java:214)
+	at org.apache.hadoop.fs.FSInputChecker.read1(FSInputChecker.java:232)
+	at org.apache.hadoop.fs.FSInputChecker.read(FSInputChecker.java:196)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at org.apache.hadoop.io.DataOutputBuffer$Buffer.write(DataOutputBuffer.java:70)
+	at org.apache.hadoop.io.DataOutputBuffer.write(DataOutputBuffer.java:120)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2359)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2491)
+	at org.apache.hadoop.mapreduce.lib.input.SequenceFileRecordReader.nextKeyValue(SequenceFileRecordReader.java:72)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.nextKeyValue(MapTask.java:553)
+	at org.apache.hadoop.mapreduce.task.MapContextImpl.nextKeyValue(MapContextImpl.java:80)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.nextKeyValue(WrappedMapper.java:91)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:144)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:784)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2015-04-25 22:51:32 INFO  Job:1366 - Job job_local109141792_0001 running in uber mode : false
+2015-04-25 22:51:32 INFO  Job:1373 -  map 0% reduce 0%
+2015-04-25 22:51:32 INFO  Job:1386 - Job job_local109141792_0001 failed with state FAILED due to: NA
+2015-04-25 22:51:32 INFO  Job:1391 - Counters: 0
